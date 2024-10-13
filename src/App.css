@@ -1,38 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(/public/p.jpg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+  color: #fff;
+  margin: 0.5rem;
+  font-size: 1.75rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.TodoWrapper {
+  background-image: url(/public/warnalee.jpg);
+  margin-top: 6rem;
+  padding: 2rem;
+  border-radius: 40px;
+  max-height: 500px;
+  overflow-y: auto;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.TodoWrapper::-webkit-scrollbar {
+  width: 10px;  
+}
+
+.TodoWrapper::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+  border-radius: 10px; 
+}
+
+.TodoWrapper::-webkit-scrollbar-thumb {
+  background-color: #28a745;
+  border-radius: 10px; 
+  border: 2px solid #f1f1f1; 
+}
+
+.TodoWrapper::-webkit-scrollbar-thumb:hover {
+  background-color: #218838;
+}
+
+.TodoForm {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.todo-input {
+  outline: none;
+  background: none;
+  border: 1px solid #f4f4f4;
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  width: 300px;
+  color: #fff;
+  transition: transform 7s ease, margin-top 0.5s ease;
+}
+
+.todo-input:focus,
+.todo-input:not(:placeholder-shown) {
+  transform: translateY(1px);
+  margin-top: 2rem;
+}
+
+.todo-btn {
+  background: #1ffc3983;
+  color: #fff;
+  border: none;
+  padding: 0.55rem;
+  cursor: pointer;
+  transition: transform 8s ease;
+}
+
+.todo-btn:hover {
+  background-color: #05661283;
+}
+
+.Todo {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background: #3cd641;
+  color: #fff;
+  padding: 0.75rem 1rem;
+  border-radius: 5px;
+  margin-bottom: 1rem;
 }
 
-.App-link {
-  color: #61dafb;
+.Todo:hover {
+  background-color: rgb(28, 187, 81);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.fa-trash {
+  margin-left: 0.75rem;
+}
+
+.incompleted {
+  color: #fff;
+  cursor: pointer;
+}
+
+.completed {
+  color: #154215;
+  text-decoration: line-through;
+  cursor: pointer;
+}
+
+.completed:hover {
+  color: #b4e3bf;
+}
+
+.edit-icon,
+.delete-icon {
+  cursor: pointer;
 }
